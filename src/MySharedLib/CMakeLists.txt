@@ -6,6 +6,7 @@ message (STATUS "CMAKE_CURRENT_BINARY_DIR is " ${CMAKE_CURRENT_BINARY_DIR})
 
 
 add_library(${PROJECT_NAME} SHARED 
+./include/public/MySharedLib/MySharedLib.h
 ./include/public/MySharedLib/Animal.h
 ./src/Animal.cpp
 ./include/public/MySharedLib/Bird.h
@@ -15,9 +16,11 @@ add_library(${PROJECT_NAME} SHARED
 
 target_include_directories(${PROJECT_NAME} 
 PUBLIC 
-./include/public/MySharedLib
+./include/public/
 PRIVATE 
-./include/private/MySharedLib
+./include/private/
 )
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE EXPORTING_MY_SHARED_LIB_DLL_SYMS)
