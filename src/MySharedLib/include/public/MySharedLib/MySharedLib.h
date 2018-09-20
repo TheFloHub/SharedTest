@@ -1,5 +1,5 @@
 #ifdef EXPORTING_MY_SHARED_LIB_DLL_SYMS
-	#define MSL_LINKAGE __declspec(dllexport)
+	#define MSLAPI __declspec(dllexport)
 #else
-	#define MSL_LINKAGE __declspec(dllimport)
+	#define MSLAPI __declspec(dllimport)
 #endif

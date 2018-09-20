@@ -5,7 +5,7 @@
 
 namespace msl
 {
-	class Animal
+	class MSLAPI Animal
 	{
 	public:
 
