@@ -7,12 +7,12 @@ message (STATUS "CMAKE_CURRENT_BINARY_DIR is " ${CMAKE_CURRENT_BINARY_DIR})
 
 add_library(${PROJECT_NAME} SHARED 
 ./include/public/MySharedLib/MySharedLib.h
-./include/public/MySharedLib/Animal.h
-./src/Animal.cpp
-./include/public/MySharedLib/Bird.h
-./src/Bird.cpp
-./include/public/MySharedLib/Tiger.h
-./src/Tiger.cpp)
+./include/public/MySharedLib/System.h
+./src/System.cpp
+./include/public/MySharedLib/Component.h
+./src/Component.cpp
+./include/public/MySharedLib/ComponentA.h
+./src/ComponentA.cpp)
 
 target_include_directories(${PROJECT_NAME} 
 PUBLIC 

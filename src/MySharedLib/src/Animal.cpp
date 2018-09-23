@@ -1,1 +1,0 @@
-#include "MySharedLib/Animal.h"
