@@ -30,8 +30,11 @@ class System::Impl {
 
   void print() const;
 
+  void run();
+
  private:
   std::string m_name = "MySystem";
+  // TODO: const forward in experimental??
   std::vector<Component*> m_components{};
 };
 
@@ -52,6 +55,12 @@ void System::Impl::print() const {
     c->print();
   }
 }
+void System::Impl::run() {
+  cout << "Running system " << m_name << "." << endl;
+  for (auto c : m_components) {
+    c->run();
+  }
+}
 }  // namespace msl
 
 /* ----------------------------------------------------------------------- */
@@ -65,3 +74,5 @@ void msl::System::addComponent(Component* c) { m_impl->addComponent(c); }
 const std::string& msl::System::getName() const { return m_impl->getName(); }
 
 void msl::System::print() const { m_impl->print(); }
+
+void msl::System::run() { m_impl->run(); }

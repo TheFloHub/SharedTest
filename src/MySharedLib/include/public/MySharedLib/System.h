@@ -34,6 +34,8 @@ class System final {
 
   MSLAPI void print() const;
 
+  MSLAPI virtual void run();
+
  private:
   class Impl;
   // TODO: why can I use stl class here?

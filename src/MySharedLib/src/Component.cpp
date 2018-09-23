@@ -21,7 +21,7 @@ class Component::Impl {
 
   // TODO: implemented
   Impl& Impl::operator=(const Impl&) = delete;
-  
+
   const std::string& getName() const;
 
   void print() const;
@@ -33,13 +33,12 @@ class Component::Impl {
 const std::string& Component::Impl::getName() const { return m_name; }
 
 void Component::Impl::print() const {
-  cout << "Component name: " <<  m_name << endl;
+  cout << "Component name: " << m_name << endl;
 }
 
 }  // namespace msl
 
 /* ----------------------------------------------------------------------- */
-
 
 msl::Component::Component() : m_impl(new Component::Impl) {}
 

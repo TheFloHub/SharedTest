@@ -1,16 +1,10 @@
 #pragma once
 
-#pragma once
-
-// TODO: shouldn't this files include no headers of the std template library?
-
 #include <memory>
 #include <string>
 #include "MySharedLib/MySharedLib.h"
 
 namespace msl {
-class Component;
-
 class Component {
  public:
   MSLAPI Component();
@@ -33,6 +27,8 @@ class Component {
   MSLAPI const std::string &getName() const;
 
   MSLAPI virtual void print() const;
+
+  MSLAPI virtual void run() = 0;
 
  private:
   class Impl;
