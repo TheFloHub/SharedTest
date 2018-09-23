@@ -24,3 +24,8 @@ PRIVATE
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE EXPORTING_MY_SHARED_LIB_DLL_SYMS)
+if(MSVC)
+  target_compile_options(${PROJECT_NAME} PRIVATE /W4 /WX)
+else(MSVC)
+  target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
+endif(MSVC)

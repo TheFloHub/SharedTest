@@ -7,7 +7,7 @@
 using namespace std;
 using namespace msl;
 
-int main(int argc, char *argv[]) {
+int main() {
   System system;
   system.addComponent(new ComponentA);
   system.addComponent(new ComponentA);
