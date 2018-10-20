@@ -1,5 +1,5 @@
-#include <MySharedLib/System.h>
 #include <MySharedLib/ComponentA.h>
+#include <MySharedLib/System.h>
 
 #include <iostream>
 #include <memory>
@@ -7,7 +7,8 @@
 using namespace std;
 using namespace msl;
 
-int main() {
+int main()
+{
   System system;
   system.addComponent(new ComponentA);
   system.addComponent(new ComponentA);
